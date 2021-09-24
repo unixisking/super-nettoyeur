@@ -30,15 +30,16 @@ module.exports = {
     },
     `gatsby-plugin-gatsby-cloud`,
     {
-      resolve: 'gatsby-source-storyblok',
+      resolve: "gatsby-source-storyblok",
       options: {
-        accessToken: 'YOUR-PREVIEW-TOKEN',
-        version: 'draft',
+        accessToken: "mk3sY2obb5HwgzTnqkQN7Qtt",
+        version: "draft",
         // languages: ['de', 'at'] // Optional parameter. Omission will retrieve all languages by default.
-      }
-    }
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    "gatsby-plugin-postcss",
   ],
 }
