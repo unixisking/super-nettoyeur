@@ -1,7 +1,7 @@
 import SbEditable from "storyblok-react"
-import Teaser from "./Teaser"
+import Teaser from "./teaser"
 import React from "react"
-import Cta from "./Cta"
+import Cta from "./cta"
 
 const Components = {
   teaser: Teaser,
