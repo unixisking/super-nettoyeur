@@ -1,50 +1,31 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import * as React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
+import DynamicComponent from "./dynamicComponent"
+
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
+    query LayoutQuery {
+      storyblokEntry(path: { eq: "global" }) {
+        uuid
+        content
       }
     }
   `)
-
+  let story = JSON.parse(data.storyblokEntry.content)
+  // story = useStoryblok(story, location)
+  // const navbar = story.content.body.find(blok => blok.component === "navbar")
+  const navbar = story.body.find(blok => blok.component === "navbar")
+  const footer = story.body.find(blok => blok.component === "footer")
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
-    </>
+    <div style={{ background: "#F0F8ED" }}>
+      <DynamicComponent blok={navbar} key={navbar._uid} />
+      <main>{children}</main>
+      <DynamicComponent blok={footer} key={footer._uid} />
+    </div>
   )
 }
 

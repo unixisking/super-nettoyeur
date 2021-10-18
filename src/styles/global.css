@@ -1,3 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+  position: relative;
+}
+
+#round-divider::before {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid #000;
+  margin: auto;
+}
+
+ul {
+  margin-left: 0.5rem !important;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

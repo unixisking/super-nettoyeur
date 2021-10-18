@@ -1,11 +1,49 @@
 import SbEditable from "storyblok-react"
-import Teaser from "./teaser"
 import React from "react"
+
+// StoryBlok Components
 import Cta from "./cta"
+import Teaser from "./teaser"
+import Navbar from "./navbar"
+import Button from "./button"
+import Hero from "./hero"
+import SecondaryCta from "./secondaryCta"
+import Service from "./service"
+import Grid from "./grid"
+import Faq from "./faq"
+import Slider from "./slider"
+import Heading from "./heading"
+import Feature from "./feature"
+import FormDevis from "./FormDevis"
+import ZonesSection from "./ZonesSection"
+import Flag from "./Flag"
+import Footer from "./Footer"
+import Section, { Perk, Perks } from "./Section"
+import Card from "./Card"
+import Contact from "./Contact"
 
 const Components = {
   teaser: Teaser,
   cta: Cta,
+  button: Button,
+  navbar: Navbar,
+  hero: Hero,
+  secondaryCta: SecondaryCta,
+  service: Service,
+  grid: Grid,
+  faq: Faq,
+  slider: Slider,
+  heading: Heading,
+  feature: Feature,
+  formDevis: FormDevis,
+  zonesSection: ZonesSection,
+  Flag: Flag,
+  footer: Footer,
+  section: Section,
+  perk: Perk,
+  perks: Perks,
+  card: Card,
+  contact: Contact,
 }
 
 const DynamicComponent = ({ blok }) => {
@@ -17,6 +55,7 @@ const DynamicComponent = ({ blok }) => {
       </SbEditable>
     )
   }
+  console.log("undefined", blok.component)
   return (
     <p>
       The component <strong>{blok.component}</strong> has not been created yet.
