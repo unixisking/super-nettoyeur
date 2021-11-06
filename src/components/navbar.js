@@ -57,9 +57,10 @@ export default function Navbar({ blok }) {
               if (blok.component === "dropdown") {
                 return (
                   <div key={blok._uid} className="relative">
-                    <button
+                    <Link
+                      to="/services"
                       type="button"
-                      onClick={() => setDropdownIsShown(!dropdownIsShown)}
+                      onMouseEnter={() => setDropdownIsShown(true)}
                       className="group text-gray-500 inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 more_dropdown_button"
                     >
                       <span>{servicesDropdown.text}</span>
@@ -76,7 +77,7 @@ export default function Navbar({ blok }) {
                           clipRule="evenodd"
                         ></path>
                       </svg>
-                    </button>
+                    </Link>
 
                     <div
                       className={clsx(
@@ -88,7 +89,10 @@ export default function Navbar({ blok }) {
                         }
                       )}
                     >
-                      <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                      <div
+                        onMouseLeave={() => setDropdownIsShown(false)}
+                        className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden"
+                      >
                         <div
                           style={{ background: "#F0F8ED" }}
                           className="z-20 relative grid gap-1  py-6 sm:py-8"
@@ -134,7 +138,7 @@ export default function Navbar({ blok }) {
 
       <div
         className={clsx(
-          "absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden menu_content z-10",
+          "absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden menu_content z-50",
           { hidden: !mobileMenuIsShown }
         )}
       >
@@ -216,16 +220,19 @@ export default function Navbar({ blok }) {
                 </button>
                 <div className={clsx({ hidden: !subMenuIsShown })}>
                   {servicesDropdown.Elements.map(element => (
-                    <Link
-                      key={element._uid}
-                      to="/blog"
-                      className="-m-3 p-6 flex items-center rounded-lg hover:bg-gray-50 ml-4"
-                      id="blog_link"
-                    >
-                      <div className="ml-4 text-base font-medium text-gray-900">
+                    <div class="flex items-center block rounded-md hover:bg-green-100 px-5">
+                      <img
+                        src={cleaningToolImage}
+                        className="text-green-500 h-6 w-auto mt-3"
+                      />
+                      <Link
+                        key={element._uid}
+                        to={element.link.url}
+                        className="-m-3 ml-4"
+                      >
                         {element.text}
-                      </div>
-                    </Link>
+                      </Link>
+                    </div>
                   ))}
                 </div>
 

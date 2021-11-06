@@ -16,10 +16,10 @@ export default function FormDevis() {
         Devis Whatsapp
       </a>
       <span className="border-b-1 bg-primarytext border-primarytext w-12" />
-      <i
+      {/* <i
         id="round-dvidier"
         className="bg-gray-900 h-2 w-2 rounded-full mx-auto mt-12"
-      />
+      /> */}
       <span className="border-b-1 border-primarytext w-12" />
       <div className="mx-auto bg-white mt-12 border-2 border-darkbg rounded-md flex">
         <button

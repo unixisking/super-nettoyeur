@@ -1,11 +1,12 @@
 import React from "react"
 import { CheckIcon } from "@heroicons/react/outline"
 import DynamicComponent from "./dynamicComponent"
+import slugify from "slugify"
 import clsx from "clsx"
 
 export default function Section({ blok }) {
   return (
-    <div className="overflow-hidden my-12">
+    <div id={blok.slug} className="overflow-hidden my-12">
       <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
         <div className="relative grid-flow-row-dense  mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center max-w-5xl mx-auto">
           <div
