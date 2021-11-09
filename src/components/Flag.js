@@ -8,6 +8,7 @@ export default function Flag({ blok }) {
         {blok.title}
       </h3>
       <img
+        loading="lazy"
         className="h-48 border-2 border-gray-300 mx-auto mt-8"
         src={blok.image.filename}
       />
