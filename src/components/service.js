@@ -1,9 +1,11 @@
 import React from "react"
+import { Link } from "gatsby"
 import { ChevronRightIcon } from "@heroicons/react/outline"
 
 export default function Service({ blok }) {
+  console.log("service", blok)
   return (
-    <div className="w-80 mx-auto">
+    <Link to={blok.link.url} className="w-80 mx-auto">
       <div>
         <img
           className="rounded-lg"
@@ -20,6 +22,6 @@ export default function Service({ blok }) {
           <p className="text-base text-primarytext-500">{blok.content}</p>
         </div>
       </div>
-    </div>
+    </Link>
   )
 }
