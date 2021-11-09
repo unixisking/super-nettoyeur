@@ -8,6 +8,8 @@ export default function Service({ blok }) {
     <Link to={blok.link.url} className="w-80 mx-auto">
       <div>
         <img
+          width="400"
+          height="400"
           loading="lazy"
           className="rounded-lg"
           src={blok.image.filename}

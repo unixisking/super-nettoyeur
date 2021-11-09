@@ -5,6 +5,8 @@ export default function Card({ blok }) {
     <div className="max-w-sm bg-white border-2 border-gray-300 p-6 rounded-md tracking-wide shadow-lg h-56">
       <div id="header" className="flex items-center">
         <img
+          height="100"
+          width="100"
           className="h-12 border-2 border-gray-300 mx-auto"
           src={blok.image.filename}
         />

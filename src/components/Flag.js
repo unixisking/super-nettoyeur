@@ -11,6 +11,8 @@ export default function Flag({ blok }) {
         loading="lazy"
         className="h-48 border-2 border-gray-300 mx-auto mt-8"
         src={blok.image.filename}
+        height="300"
+        width="300"
       />
     </div>
   )

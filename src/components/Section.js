@@ -43,9 +43,9 @@ export default function Section({ blok }) {
           >
             <img
               className="relative mx-auto lg:m-0"
-              width={490}
+              width="500"
+              height="500"
               src={blok.image.filename}
-              alt=""
             />
           </div>
         </div>
