@@ -18,7 +18,6 @@ const Page = ({ pageContext, location }) => {
   return (
     <Layout>
       <Seo title="Home" />
-      <h1>{story.content.title}</h1>
       {components}
     </Layout>
   )
