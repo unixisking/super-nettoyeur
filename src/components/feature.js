@@ -1,12 +1,16 @@
 import React from "react"
+import clsx from "clsx"
 
 export default function Feature({ blok }) {
   return (
-    <div className="max-w-sm bg-white border-2 border-gray-300 p-6 rounded-md tracking-wide shadow-lg m-4 h-48">
+    <div
+      className={clsx(
+        "max-w-sm bg-white border-2 border-gray-300 rounded-md tracking-wide shadow-lg p-6",
+        { "col-span-3 mx-auto": blok.center }
+      )}
+    >
       <div id="header" className="flex items-center">
         <img
-          height="100"
-          width="75"
           className="h-12 border-2 border-gray-300 mx-auto"
           src={blok.image.filename}
         />

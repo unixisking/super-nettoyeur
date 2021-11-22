@@ -7,6 +7,7 @@ export const SERVICES = [
   "Nettoyage désinfection Covid",
   "Nettoyage établissements",
   "Nettoyage vitres:",
+  "Autres",
 ]
 
 export const ZONES = ["Lausanne", "Montreux", "Nyon"]

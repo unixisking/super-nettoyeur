@@ -1,4 +1,7 @@
 export const sizes = {
+  md: "text-md",
+  lg: "text-lg",
+  xl: "text-xl",
   small: "text-2xl",
   medium: "text-3xl",
   large: "text-4xl",

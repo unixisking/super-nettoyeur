@@ -181,18 +181,16 @@ export default function Navbar({ blok }) {
               <nav className="grid gap-6">
                 <Link
                   to="/"
-                  className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
+                  className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50 ml-2 text-base font-medium text-gray-900"
                 >
-                  <div className="ml-4 text-base font-medium text-gray-900">
-                    Accueil
-                  </div>
+                  Accueil
                 </Link>
                 <button
                   className="-m-3 p-3 flex items-center justify-center rounded-lg hover:bg-gray-50 focus:outline-none"
                   onClick={() => setSubMenuIsShown(!subMenuIsShown)}
                 >
                   <div className="flex items-center w-full">
-                    <div className="ml-4 text-base font-medium text-gray-900">
+                    <div className="ml-5 text-base font-medium text-gray-900">
                       {servicesDropdown.text}
                     </div>
                   </div>
@@ -238,11 +236,15 @@ export default function Navbar({ blok }) {
 
                 <Link
                   to="/faq"
-                  className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
+                  className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50 ml-2 text-base font-medium text-gray-900"
                 >
-                  <div className="ml-4 text-base font-medium text-gray-900">
-                    FAQ
-                  </div>
+                  FAQ
+                </Link>
+                <Link
+                  to="/a-propos"
+                  className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50 ml-2 text-base font-medium text-gray-900"
+                >
+                  A propos
                 </Link>
                 {/* <Link
                   to="/faq"
@@ -253,6 +255,14 @@ export default function Navbar({ blok }) {
                   </div>
                 </Link> */}
               </nav>
+              <div className="block w-full py-3 text-center font-medium mt-4">
+                <Link
+                  to="/contact"
+                  className="block w-full py-3 px-4 rounded-md shadow-lg bg-primarybg text-white font-bold focus:outline-none"
+                >
+                  {blok.buttonText}
+                </Link>
+              </div>
             </div>
           </div>
           {/* <div className="py-6 px-5">

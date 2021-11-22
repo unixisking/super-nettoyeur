@@ -21,35 +21,6 @@ export default function FormDevis() {
         className="bg-gray-900 h-2 w-2 rounded-full mx-auto mt-12"
       /> */}
       <span className="border-b-1 border-primarytext w-12" />
-      <div className="mx-auto bg-white mt-12 border-2 border-darkbg rounded-md flex">
-        <button
-          onClick={() => setIsCompany(false)}
-          type="button"
-          className={clsx(
-            "relative w-1/2 shadow-sm border-transparent border-2 py-2 px-4 text-sm font-medium whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-darkbg focus:z-10 sm:w-auto sm:px-8",
-            {
-              "bg-gray-800 text-white border-darkbg": !isCompany,
-              "text-gray-700": isCompany,
-            }
-          )}
-        >
-          Particulier
-        </button>
-        <button
-          onClick={() => setIsCompany(true)}
-          type="button"
-          className={clsx(
-            "ml-0.5 relative w-1/2 border-transparent border-2 border-l-transparent py-2 px-4 text-sm font-medium whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-darkbg-500 focus:z-10 sm:w-auto sm:px-8",
-            {
-              "bg-gray-800 border-darkbg text-white": isCompany,
-              "text-gray-700": !isCompany,
-            }
-          )}
-        >
-          Entreprise
-        </button>
-      </div>
-
       <div className="py-10 px-6 sm:px-10 xl:py-12 xl:px-48">
         <form
           action="#"
@@ -72,24 +43,6 @@ export default function FormDevis() {
                 className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-primarybg focus:border-primarybg border-gray-300 rounded-md"
               />
             </div>
-          </div>
-          <div>
-            <label
-              htmlFor="location"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Zone
-            </label>
-            <select
-              id="location"
-              name="location"
-              className="mt-1 block w-full pl-3 pr-10 py-3 text-base border-gray-300 focus:outline-none focus:ring-primarybg focus:border-primarybg sm:text-sm rounded-md"
-              defaultValue="Lausanne"
-            >
-              {ZONES.map(zone => (
-                <option>{zone}</option>
-              ))}
-            </select>
           </div>
           <div>
             <div className="flex justify-between">
@@ -122,14 +75,23 @@ export default function FormDevis() {
               id="location"
               name="location"
               className="mt-1 block w-full pl-3 pr-10 py-3 text-base border-gray-300 focus:outline-none focus:ring-primarybg focus:border-primarybg sm:text-sm rounded-md"
-              defaultValue="Lausanne"
+              defaultValue="-"
             >
+              <option
+                value="-"
+                placeholder="Choisir une prestation"
+                selected
+                disabled
+                hidden
+              >
+                -
+              </option>
               {SERVICES.map(service => (
                 <option>{service}</option>
               ))}
             </select>
           </div>
-          <div className="sm:col-span-2">
+          <div className="">
             <div className="flex justify-between">
               <label
                 htmlFor="message"

@@ -18,16 +18,7 @@ const navigation = {
     { name: "Nettoyage magasin", href: "#" },
     { name: "Nettoyage fin de chantier", href: "#" },
   ],
-  zones: [
-    { name: "Lausanne", href: "#" },
-    { name: "Bussigny", href: "#" },
-    { name: "Lutry", href: "#" },
-    { name: "Montreux", href: "#" },
-    { name: "Morges", href: "#" },
-    { name: "Nyon", href: "#" },
-    { name: "Pully", href: "#" },
-    { name: "Vevey", href: "#" },
-  ],
+  entreprise: [{ name: "A propos", href: "#" }],
 
   //   social: [
   //     {
@@ -181,10 +172,10 @@ export default function Footer({ blok }) {
             </div>
             <div>
               <h3 className="text-sm font-semibold text-gray-300 tracking-wider uppercase">
-                Zones
+                Entreprise
               </h3>
               <ul role="list" className="mt-4 space-y-4">
-                {navigation.zones.map(item => (
+                {navigation.entreprise.map(item => (
                   <li key={item.name}>
                     <a
                       href={item.href}

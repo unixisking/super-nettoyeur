@@ -11,36 +11,14 @@ SwiperCore.use([Pagination, Keyboard])
 
 export default function Slider({ blok }) {
   return (
-    <Swiper
-      className="mb-12"
-      direction="horizontal"
-      slidesPerView={3}
-      breakpoints={{
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 10,
-        },
-        750: {
-          slidesPerView: 2,
-          spaceBetween: 10,
-        },
-        900: {
-          slidesPerView: 3,
-          spaceBetween: 20,
-        },
-      }}
-      navigation
-      pagination
-      mousewheel
-      keyboard
-      loop
-      autoplay
-    >
-      {blok.columns.map(component => (
-        <SwiperSlide className="flex justify-center">
-          <DynamicComponent key={component._uid} blok={component} />
-        </SwiperSlide>
-      ))}
-    </Swiper>
+    <div className="py-12 bg-secondarybg">
+      <div className="max-w-xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+        <dl className="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8">
+          {blok.columns.map(component => (
+            <DynamicComponent key={component._uid} blok={component} />
+          ))}
+        </dl>
+      </div>
+    </div>
   )
 }
