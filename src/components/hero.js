@@ -26,7 +26,7 @@ export default function Hero({ blok }) {
   )
   console.log("hero", blok)
   return (
-    <div className="relative lg:h-screen">
+    <div className="relative lg:h-screen mb-36">
       <div className="max-w-7xl mx-auto">
         <div
           style={{ background: "rgb(240, 248, 237)" }}
@@ -306,7 +306,7 @@ export default function Hero({ blok }) {
                   ></path>
                 </svg>
               </a>
-              <div className="mt-6">
+              <div className="mt-6 max-w-xl">
                 {features.map(feature => (
                   <div class="flex">
                     <div class="flex-shrink-0">
