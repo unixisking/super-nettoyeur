@@ -131,7 +131,14 @@ export default function Navbar({ blok }) {
             })}
           </nav>
           <div className="flex items-center md:ml-12">
-            <Button to="/contact" text={blok.buttonText} variant="primary" />
+            <div className="block w-full px-5 py-3 text-center font-medium">
+              <Link
+                to="/contact"
+                className="block w-full py-2 px-4 rounded-md shadow-lg bg-primarybg text-white font-bold focus:outline-none"
+              >
+                Contactez-nous
+              </Link>
+            </div>
           </div>
         </div>
       </div>

@@ -18,7 +18,7 @@ export default function Hero({ blok }) {
   )
   console.log("hero", blok)
   return (
-    <div className="relative lg:h-screen mb-36">
+    <div className="relative lg:h-screen">
       <div className="max-w-7xl mx-auto">
         <div
           style={{ background: "rgb(240, 248, 237)" }}
@@ -266,13 +266,16 @@ export default function Hero({ blok }) {
             </Transition>
           </Popover>
 
-          <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-24 lg:px-8">
+          <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-32 lg:px-8">
             <div className="sm:text-center hero:text-left">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                 <span className="block text-primarybg xl:inline">
                   {blok.title}
                 </span>
               </h1>
+              <p className="text-lg text-darkbg max-w-xl mx-auto hero:mx-0">
+                {blok.description}
+              </p>
               {blok.button[0]?.link && (
                 <div className="sm:flex sm:justify-center hero:justify-start">
                   <div className="rounded-md shadow">

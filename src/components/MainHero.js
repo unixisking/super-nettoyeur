@@ -306,7 +306,7 @@ export default function MainHero({ blok }) {
                   ></path>
                 </svg>
               </a>
-              <div className="mt-6 max-w-xl">
+              <div className="mt-6 max-w-xl mx-auto hero:mx-0">
                 {features.map(feature => (
                   <div class="flex">
                     <div class="flex-shrink-0">
