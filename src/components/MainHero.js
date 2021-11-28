@@ -9,7 +9,15 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline"
 
 import cleaningToolImage from "../images/cleaning-tool.png"
 
-export default function Hero({ blok }) {
+const features = [
+  "Disponibilité 7J/7 et 24H/24, 365 jours par an.",
+  "Ponctualité et rapidité des interventions dans tout le canton de Vaud.",
+  "Tarifs raisonnables pour des services de qualité.",
+  "Devis instantané via WhatsApp pour les particuliers via ou sur rendez-vous pour les entreprises.",
+  "Nettoyage et entretien pour tout type de locaux (bureau, appartement, commerces, immeuble, etc).",
+]
+
+export default function MainHero({ blok }) {
   const [dropdownIsShown, setDropdownIsShown] = useState(false)
   const [subMenuIsShown, setSubMenuIsShown] = useState(false)
 
@@ -273,6 +281,61 @@ export default function Hero({ blok }) {
                   {blok.title}
                 </span>
               </h1>
+              <a
+                id="call-button"
+                href="tel:0786053363"
+                class="mt-4 inline-flex items-center text-secondarycolor bg-darkbg rounded-full p-2 sm:mt-5 sm:text-base lg:mt-6 lg:text-sm xl:text-base hover:text-secondarycolor-light"
+              >
+                <span class="px-3 py-2 text-white text-lg  lg:text-xl xl:text-2xl  leading-5  tracking-wide bg-primarybg rounded-full">
+                  Appelez-nous
+                </span>
+                <span class="  ml-3 text-lg  lg:text-xl xl:text-2xl font-semibold leading-5 text-white">
+                  078 605 33 63
+                </span>
+                <svg
+                  class="ml-2 w-6 h-6 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </a>
+              <div className="mt-6 max-w-xl">
+                {features.map(feature => (
+                  <div class="flex">
+                    <div class="flex-shrink-0">
+                      <div class="flex items-center justify-center h-8 w-8 text-green-700">
+                        <svg
+                          class=" h-5 w-5"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M5 13l4 4L19 7"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="ml-4 text-left">
+                      <h3 class="text-base leading-6 font-medium text-gray-600">
+                        {feature}
+                      </h3>
+                    </div>
+                  </div>
+                ))}
+              </div>
               {blok.button[0]?.link && (
                 <div className="sm:flex sm:justify-center hero:justify-start">
                   <div className="rounded-md shadow">

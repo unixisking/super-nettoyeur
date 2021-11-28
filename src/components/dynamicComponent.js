@@ -21,6 +21,7 @@ import Footer from "./Footer"
 import Section, { Perk, Perks } from "./Section"
 import Card from "./Card"
 import Contact from "./Contact"
+import MainHero from "./MainHero"
 
 const Components = {
   teaser: Teaser,
@@ -44,6 +45,7 @@ const Components = {
   perks: Perks,
   card: Card,
   contact: Contact,
+  main_hero: MainHero,
 }
 
 const DynamicComponent = ({ blok }) => {
