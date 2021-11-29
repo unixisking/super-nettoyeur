@@ -1,11 +1,46 @@
 import React, { useState } from "react"
+import { useForm } from "react-hook-form"
+import { yupResolver } from "@hookform/resolvers/yup"
+import * as yup from "yup"
+
 import clsx from "clsx"
 
 import { FaWhatsapp } from "react-icons/fa"
 import { SERVICES, ZONES } from "../helpers"
+import { navigate } from "gatsby-link"
+
+const schema = yup
+  .object({
+    name: yup.string().required(),
+    email: yup.string().email().required(),
+    phone: yup.string().required(),
+    service: yup.string().required(),
+    message: yup.string().required(),
+  })
+  .required()
 
 export default function FormDevis() {
-  const [isCompany, setIsCompany] = useState(false)
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  })
+  const onSubmit = formData => {
+    fetch("/api/get_devis", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then(() => navigate("/merci"))
+      .catch(err => console.error(err))
+  }
+  console.log("errros", errors)
+
   return (
     <div className="relative mt-6 rounded-lg flex flex-col max-w-7xl sm:mt-8 bg-secondarybg">
       <a
@@ -23,10 +58,24 @@ export default function FormDevis() {
       <span className="border-b-1 border-primarytext w-12" />
       <div className="py-10 px-6 sm:px-10 xl:py-12 xl:px-48">
         <form
-          action="#"
-          method="POST"
+          onSubmit={handleSubmit(onSubmit)}
           className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
         >
+          <div>
+            <label
+              htmlFor="name"
+              className="block text-sm font-medium text-gray-900"
+            >
+              Email
+            </label>
+            <div className="mt-1">
+              <input
+                {...register("name")}
+                autoComplete="name"
+                className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-primarybg focus:border-primarybg border-gray-300 rounded-md"
+              />
+            </div>
+          </div>
           <div>
             <label
               htmlFor="email"
@@ -36,8 +85,7 @@ export default function FormDevis() {
             </label>
             <div className="mt-1">
               <input
-                id="email"
-                name="email"
+                {...register("email")}
                 type="email"
                 autoComplete="email"
                 className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-primarybg focus:border-primarybg border-gray-300 rounded-md"
@@ -55,6 +103,7 @@ export default function FormDevis() {
             </div>
             <div className="mt-1">
               <input
+                {...register("phone")}
                 type="text"
                 name="phone"
                 id="phone"
@@ -72,8 +121,7 @@ export default function FormDevis() {
               Type de service
             </label>
             <select
-              id="location"
-              name="location"
+              {...register("location")}
               className="mt-1 block w-full pl-3 pr-10 py-3 text-base border-gray-300 focus:outline-none focus:ring-primarybg focus:border-primarybg sm:text-sm rounded-md"
               defaultValue="-"
             >
@@ -102,8 +150,7 @@ export default function FormDevis() {
             </div>
             <div className="mt-1">
               <textarea
-                id="message"
-                name="message"
+                {...register("message")}
                 rows={4}
                 className="py-3 px-4 block w-full shadow-sm text-gray-900 border-gray-300 focus:ring-primarybg focus:border-primarybg border rounded-md"
                 aria-describedby="message-max"
