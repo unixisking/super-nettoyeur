@@ -9,14 +9,13 @@ import useStoryblok from "../lib/storyblok"
 const IndexPage = ({ data, location }) => {
   let story = data.storyblokEntry
   story = useStoryblok(story, location)
-  // const cta = story.content.body.find(blok => blok.component === "cta")
-  console.log("story", story)
   const components = story.content.body.map(blok => {
     return <DynamicComponent blok={blok} key={blok._uid} />
   })
+  const SEO = story.content.body.filter(blok => blok.component === "SEO")[0]
   return (
     <Layout location={location}>
-      <Seo title="Home" />
+      <Seo title={SEO.title} description={SEO.description} />
       {components}
     </Layout>
   )
