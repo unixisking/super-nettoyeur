@@ -180,7 +180,7 @@ export default function MainHero({ blok }) {
                     <div>
                       <img
                         className="h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                        src={blok.logo.filename}
                         alt=""
                       />
                     </div>

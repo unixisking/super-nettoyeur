@@ -42,12 +42,6 @@ export default function Hero({ blok }) {
               >
                 <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                   <div className="flex items-center justify-between w-full md:w-auto">
-                    {/* <a href="#">
-                      <img
-                        className="h-8 w-auto sm:h-10"
-                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                      />
-                    </a> */}
                     <Link to="/" className="flex items-center">
                       <img
                         className="h-8 w-auto sm:h-12 mt-4"
@@ -171,8 +165,9 @@ export default function Hero({ blok }) {
                   <div className="px-5 pt-4 flex items-center justify-between">
                     <div>
                       <img
+                        id="hello"
                         className="h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                        src={blok.logo.filename}
                         alt=""
                       />
                     </div>
