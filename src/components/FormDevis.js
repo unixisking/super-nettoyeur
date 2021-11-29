@@ -73,9 +73,11 @@ export default function FormDevis() {
             <div className="mt-1">
               <input
                 {...register("name")}
-                autoComplete="name"
-                placeholder="John Doe"
-                className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-primarybg focus:border-primarybg border-gray-300 rounded-md"
+                type="text"
+                placeholder="Votre nom"
+                name="name"
+                id="name"
+                className="py-3 px-4 block w-full shadow-sm text-gray-900 border-gray-300 focus:ring-primarybg focus:border-primarybg rounded-md"
               />
               <p className="text-sm text-red-500 mt-2">
                 {errors.name?.message}
