@@ -22,6 +22,8 @@ import Section, { Perk, Perks } from "./Section"
 import Card from "./Card"
 import Contact from "./Contact"
 import MainHero from "./MainHero"
+import Seo from "./seo"
+import ThankYou from "./thankyou"
 
 const Components = {
   teaser: Teaser,
@@ -46,6 +48,8 @@ const Components = {
   card: Card,
   contact: Contact,
   main_hero: MainHero,
+  SEO: Seo,
+  thankyou: ThankYou,
 }
 
 const DynamicComponent = ({ blok }) => {
