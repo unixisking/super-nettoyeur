@@ -1,24 +1,40 @@
+import { Link } from "gatsby"
 import React from "react"
 import { FaClock, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa"
 import { GrMail } from "react-icons/gr"
 
 const navigation = {
-  entreprise: [
-    { name: "Accueil", href: "#" },
-    { name: "à propos", href: "#" },
-    { name: "FAQ", href: "#" },
+  site: [
+    { name: "Accueil", href: "/" },
+    { name: "à propos", href: "/a-propos" },
+    { name: "FAQ", href: "/faq" },
   ],
   services: [
-    { name: "Nettoyage appartement", href: "#" },
-    { name: "Nettoyage maison", href: "#" },
-    { name: "Nettoyage de Vitres", href: "#" },
-    { name: "Nettoyage établissement", href: "#" },
-    { name: "Après déménagement", href: "#" },
-    { name: "Désinfection COVID19", href: "#" },
-    { name: "Nettoyage magasin", href: "#" },
-    { name: "Nettoyage fin de chantier", href: "#" },
+    {
+      name: "Nettoyage appartement",
+      href: "/services#nettoyage-et-conciergerie-dimmeubles",
+    },
+    { name: "Nettoyage maison", href: "/services#nettoyage-maisons" },
+    { name: "Nettoyage de Vitres", href: "/services#nettoyage-vitres" },
+    {
+      name: "Nettoyage établissement",
+      href: "/services#nettoyage-etablissements",
+    },
+    {
+      name: "Après déménagement",
+      href: "/services#nettoyage-fin-de-bail-etat-des-lieux",
+    },
+    {
+      name: "Désinfection COVID19",
+      href: "/services#nettoyage-desinfection-covid",
+    },
+    { name: "Nettoyage magasin", href: "/services#nettoyage-magasins" },
+    {
+      name: "Nettoyage fin de chantier",
+      href: "/services#nettoyage-fin-de-chantier",
+    },
   ],
-  entreprise: [{ name: "A propos", href: "#" }],
+  entreprise: [{ name: "A propos", href: "/a-propos" }],
 
   //   social: [
   //     {
@@ -138,17 +154,17 @@ export default function Footer({ blok }) {
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 xl:mt-0 xl:col-span-2 lg:ml-24">
             <div>
               <h3 className="text-sm font-semibold text-gray-300 tracking-wider uppercase">
-                Entreprise
+                SUPER NETTOYEUR
               </h3>
               <ul role="list" className="mt-4 space-y-4">
-                {navigation.entreprise.map(item => (
+                {navigation.site.map(item => (
                   <li key={item.name}>
-                    <a
-                      href={item.href}
+                    <Link
+                      to={item.href}
                       className="text-base text-gray-400 hover:text-gray-300"
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -160,33 +176,33 @@ export default function Footer({ blok }) {
               <ul role="list" className="mt-4 space-y-4">
                 {navigation.services.map(item => (
                   <li key={item.name}>
-                    <a
-                      href={item.href}
+                    <Link
+                      to={item.href}
                       className="text-base text-gray-400 hover:text-gray-300"
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
             </div>
-            <div>
+            {/* <div>
               <h3 className="text-sm font-semibold text-gray-300 tracking-wider uppercase">
                 Entreprise
               </h3>
               <ul role="list" className="mt-4 space-y-4">
                 {navigation.entreprise.map(item => (
                   <li key={item.name}>
-                    <a
-                      href={item.href}
+                    <Link
+                      to={item.href}
                       className="text-base text-gray-400 hover:text-gray-300"
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
         {/* <div className="mt-12 border-t border-gray-200 pt-8">
