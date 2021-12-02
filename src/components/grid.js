@@ -8,7 +8,7 @@ export default function Grid({ blok }) {
     <div className="relative mx-auto max-w-5xl my-24">
       <div
         className={clsx([
-          "space-y-28 md:space-y-0 md:grid md:gap-x-8 md:gap-y-24 pb-16",
+          "space-y-28 md:space-y-0 md:grid md:gap-x-8 md:gap-y-24 pb-16 mx-8",
           "md:grid-cols-" + blok.number_of_cols,
         ])}
       >

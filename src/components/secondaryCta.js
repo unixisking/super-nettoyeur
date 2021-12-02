@@ -3,7 +3,7 @@ import * as React from "react"
 
 export default function SecondaryCta({ blok }) {
   return (
-    <div className="py-32 bg-darkbg sm:py-12 my-12">
+    <div className="py-12 bg-darkbg sm:py-4 my-12">
       <div className="relative">
         <div className="text-center sm:px-6 lg:max-w-full lg:px-0">
           <div className="relative px-6 py-3 overflow-hidden sm:px-12">

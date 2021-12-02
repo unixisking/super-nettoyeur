@@ -45,13 +45,6 @@ export default function FormDevis() {
 
   return (
     <div className="relative mt-6 rounded-lg flex flex-col max-w-7xl sm:mt-8 bg-secondarybg">
-      <a
-        href=""
-        className="text-base font-medium px-5 py-2 rounded-md shadow-lg text-white bg-primarybg mx-auto flex items-center"
-      >
-        <FaWhatsapp className="text-2xl text-white mr-2" />
-        Devis Whatsapp
-      </a>
       <span className="border-b-1 bg-primarytext border-primarytext w-12" />
       {/* <i
         id="round-dvidier"
@@ -63,7 +56,7 @@ export default function FormDevis() {
           onSubmit={handleSubmit(onSubmit)}
           className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
         >
-          <div>
+          <div className="col-span-2 sm:col-span-1">
             <label
               htmlFor="name"
               className="block text-sm font-medium text-gray-900"
@@ -84,7 +77,7 @@ export default function FormDevis() {
               </p>
             </div>
           </div>
-          <div>
+          <div className="col-span-2 sm:col-span-1">
             <label
               htmlFor="email"
               className="block text-sm font-medium text-gray-900"
@@ -104,7 +97,7 @@ export default function FormDevis() {
               </p>
             </div>
           </div>
-          <div>
+          <div className="col-span-2 sm:col-span-1">
             <div className="flex justify-between">
               <label
                 htmlFor="phone"

@@ -5,8 +5,8 @@ export default function Feature({ blok }) {
   return (
     <div
       className={clsx(
-        "max-w-sm bg-white border-2 border-gray-300 rounded-md tracking-wide shadow-lg p-6",
-        { "col-span-3 mx-auto": blok.center }
+        "max-w-sm bg-white border-2 border-gray-300 rounded-md tracking-wide shadow-lg p-6 mx-auto",
+        { "lg:col-span-3": blok.center }
       )}
     >
       <div id="header" className="flex items-center">

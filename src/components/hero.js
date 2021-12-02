@@ -272,7 +272,7 @@ export default function Hero({ blok }) {
                 {blok.description}
               </p>
               {blok.button[0]?.link && (
-                <div className="sm:flex sm:justify-center hero:justify-start">
+                <div className="sm:flex sm:justify-center hero:justify-start text-center">
                   <div className="rounded-md shadow">
                     <Link
                       to={blok.button[0].link.url}

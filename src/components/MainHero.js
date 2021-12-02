@@ -3,8 +3,8 @@ import clsx from "clsx"
 import { Link } from "gatsby"
 
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from "react"
 import { Popover, Transition } from "@headlessui/react"
+import { Fragment } from "react"
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
 
 import cleaningToolImage from "../images/cleaning-tool.png"
@@ -24,7 +24,6 @@ export default function MainHero({ blok }) {
   const servicesDropdown = blok.navbar[0].Elements.find(
     ele => ele.component === "dropdown"
   )
-  console.log("hero", blok)
   return (
     <div className="relative lg:h-screen mb-36">
       <div className="max-w-7xl mx-auto">
@@ -337,7 +336,7 @@ export default function MainHero({ blok }) {
                 ))}
               </div>
               {blok.button[0]?.link && (
-                <div className="sm:flex sm:justify-center hero:justify-start">
+                <div className="sm:flex sm:justify-center hero:justify-start text-center">
                   <div className="rounded-md shadow">
                     <Link
                       to={blok.button[0].link.url}

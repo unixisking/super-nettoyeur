@@ -3,7 +3,6 @@ import clsx from "clsx"
 import { Link } from "gatsby"
 
 import cleaningToolImage from "../images/cleaning-tool.png"
-import Button from "./button"
 
 export default function Navbar({ blok }) {
   const [dropdownIsShown, setDropdownIsShown] = useState(false)

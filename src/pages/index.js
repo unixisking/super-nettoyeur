@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import DynamicComponent from "../components/dynamicComponent"
 import useStoryblok from "../lib/storyblok"
+import Popup from "../components/Popup"
 
 const IndexPage = ({ data, location }) => {
   let story = data.storyblokEntry
@@ -13,6 +14,7 @@ const IndexPage = ({ data, location }) => {
     return <DynamicComponent blok={blok} key={blok._uid} />
   })
   const SEO = story.content.body.filter(blok => blok.component === "SEO")[0]
+
   return (
     <Layout location={location}>
       <Seo title={SEO.title} description={SEO.description} />
