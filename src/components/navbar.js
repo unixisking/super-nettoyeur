@@ -23,7 +23,7 @@ export default function Navbar({ blok }) {
             alt="Super Serrurier"
           />
           <h2 className="text-primarybg text-2xl font-bold ml-4 mt-2">
-            Super Nettoyeur
+            Super Nettoyage
           </h2>
         </Link>
         <div className="-mr-2 -my-2 md:hidden">

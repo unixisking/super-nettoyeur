@@ -114,10 +114,10 @@ export default function Footer({ blok }) {
               <img
                 className="h-10"
                 src={blok.logo.filename}
-                alt="Super Nettoyeur"
+                alt="Super Nettoyage"
               />
               <h2 className="text-primarybg text-2xl text-uppercase ml-4">
-                Super Nettoyeur
+                Super Nettoyage
               </h2>
             </div>
             <div className="text-gray-300 text-base flex flex-col">
@@ -154,7 +154,7 @@ export default function Footer({ blok }) {
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 xl:mt-0 xl:col-span-2 lg:ml-24">
             <div>
               <h3 className="text-sm font-semibold text-gray-300 tracking-wider uppercase">
-                SUPER NETTOYEUR
+                SUPER NETTOYAGE
               </h3>
               <ul role="list" className="mt-4 space-y-4">
                 {navigation.site.map(item => (

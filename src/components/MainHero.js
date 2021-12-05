@@ -49,21 +49,12 @@ export default function MainHero({ blok }) {
               >
                 <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                   <div className="flex items-center justify-between w-full md:w-auto">
-                    {/* <a href="#">
-                      <img
-                        className="h-8 w-auto sm:h-10"
-                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                      />
-                    </a> */}
                     <Link to="/" className="flex items-center">
                       <img
                         className="h-8 w-auto sm:h-12 mt-4"
                         src={blok.logo.filename}
                         alt="Super Serrurier"
                       />
-                      {/* <h2 className="text-primarybg text-lg font-bold mt-2">
-                        Super Nettoyeur
-                      </h2> */}
                     </Link>
 
                     <div className="-mr-2 flex items-center md:hidden">

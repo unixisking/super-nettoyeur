@@ -13,7 +13,7 @@ export default function ThankYou({ blok }) {
           to="/a-propos"
           className="mx-auto py-3 px-4 rounded-md shadow-lg bg-primarybg text-white font-bold focus:outline-none"
         >
-          En savoir plus sur Super Nettoyeur
+          En savoir plus sur Super Nettoyage
         </Link>
       </div>
     </div>

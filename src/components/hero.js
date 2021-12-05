@@ -48,9 +48,6 @@ export default function Hero({ blok }) {
                         src={blok.logo.filename}
                         alt="Super Serrurier"
                       />
-                      {/* <h2 className="text-primarybg text-lg font-bold mt-2">
-                        Super Nettoyeur
-                      </h2> */}
                     </Link>
 
                     <div className="-mr-2 flex items-center md:hidden">
