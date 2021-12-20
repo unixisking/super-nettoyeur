@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Super Nettoyage`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@sidou01`,
+    description: `Entreprise de nettoyage en Romandie, pas cher, Disponible 24/7.`,
+    author: `@try2promote`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

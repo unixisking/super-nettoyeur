@@ -13,11 +13,15 @@ const Page = ({ pageContext, location }) => {
   const components = story.content.body.map(blok => {
     return <DynamicComponent blok={blok} key={blok._uid} />
   })
-  const SEO = story.content.body.filter(blok => blok.component === "SEO")[0]
+
+  console.log("template page", story)
 
   return (
     <Layout>
-      <Seo title={SEO.title} description={SEO.description} />
+      <Seo
+        title={story.content.meta.title}
+        description={story.content.meta.description}
+      />
       {components}
       {/* <FaWhatsappSquare
         id="helloworld"
