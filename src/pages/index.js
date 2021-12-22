@@ -14,13 +14,9 @@ const IndexPage = ({ data, location }) => {
     return <DynamicComponent blok={blok} key={blok._uid} />
   })
   const SEO = story.content.body.filter(blok => blok.component === "SEO")[0]
+  console.log("index seo", SEO)
 
-  return (
-    <Layout location={location}>
-      <Seo title={SEO.title} description={SEO.description} />
-      {components}
-    </Layout>
-  )
+  return <Layout location={location}>{components}</Layout>
 }
 
 export default IndexPage

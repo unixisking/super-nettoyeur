@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import { ChevronRightIcon } from "@heroicons/react/outline"
 
 export default function Service({ blok }) {
-  console.log("service", blok)
   return (
     <Link to={blok.link.url} className="w-80 mx-auto">
       <div>

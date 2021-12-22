@@ -13,15 +13,8 @@ const Page = ({ pageContext, location }) => {
   const components = story.content.body.map(blok => {
     return <DynamicComponent blok={blok} key={blok._uid} />
   })
-
-  console.log("template page", story)
-
   return (
     <Layout>
-      <Seo
-        title={story.content.meta.title}
-        description={story.content.meta.description}
-      />
       {components}
       {/* <FaWhatsappSquare
         id="helloworld"

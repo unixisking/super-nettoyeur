@@ -3,6 +3,7 @@ module.exports = {
     title: `Super Nettoyage`,
     description: `Entreprise de nettoyage en Romandie, pas cher, Disponible 24/7.`,
     author: `@try2promote`,
+    titleTemplate: "%s · Super Nettoyage",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
