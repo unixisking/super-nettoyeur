@@ -63,14 +63,14 @@ export default function Contact({ blok }) {
                 <FaMapMarkerAlt className="text-2xl text-primarybg" />
                 <p className="text-darkbg text-md ml-4">{blok.address}</p>
               </div>
-              <div className="flex">
+              <a className="flex" href={`tel:${blok.phone}`}>
                 <FaPhoneAlt className="text-2xl text-primarybg" />
                 <p className="text-darkbg text-md ml-4">{blok.phone}</p>
-              </div>
-              <div className="flex">
+              </a>
+              <a className="flex" href={`mailto:${blok.email}`}>
                 <GrMail className="text-2xl text-primarybg" />
                 <p className="text-darkbg text-md ml-4">{blok.email}</p>
-              </div>
+              </a>
               <div className="flex">
                 <FaClock className="text-2xl text-primarybg" />
                 <p className="text-darkbg text-md ml-4">{blok.timeline}</p>
