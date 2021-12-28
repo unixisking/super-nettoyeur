@@ -121,7 +121,7 @@ export default function Contact({ blok }) {
                 <input
                   {...register("phone")}
                   type="text"
-                  placeholder="078 605 33 63"
+                  placeholder="079 130 47 68"
                   autoComplete="tel"
                   className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-primarybg focus:border-primarybg border-gray-300 rounded-md"
                 />

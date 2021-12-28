@@ -111,7 +111,7 @@ export default function FormDevis() {
                 {...register("phone")}
                 type="text"
                 name="phone"
-                placeholder="078 605 33 63"
+                placeholder="079 130 47 68"
                 id="phone"
                 autoComplete="tel"
                 className="py-3 px-4 block w-full shadow-sm text-gray-900 border-gray-300 focus:ring-primarybg focus:border-primarybg rounded-md"

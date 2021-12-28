@@ -26,7 +26,7 @@ export default function Popup() {
   return (
     <>
       <a
-        href="https://api.whatsapp.com/send?phone=0786053363&text=Bonjour"
+        href="https://api.whatsapp.com/send?phone=0791304768&text=Bonjour"
         className="floating w-14 h-14 border-radius-full bg-green-500 fixed bottom-8 right-12 z-50 rounded-md block md:hidden"
       >
         <FaWhatsapp
@@ -64,7 +64,7 @@ export default function Popup() {
                 </div>
                 <div className="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto mr-2">
                   <a
-                    href="https://api.whatsapp.com/send?phone=0786053363&text=Bonjour"
+                    href="https://api.whatsapp.com/send?phone=0791304768&text=Bonjour"
                     className="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700"
                   >
                     Demander un devis

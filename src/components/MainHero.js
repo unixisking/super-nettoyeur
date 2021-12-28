@@ -273,14 +273,14 @@ export default function MainHero({ blok }) {
               </h1>
               <a
                 id="call-button"
-                href="tel:0786053363"
+                href="tel:0791304768"
                 class="mt-4 inline-flex items-center text-secondarycolor bg-darkbg rounded-full p-2 sm:mt-5 sm:text-base lg:mt-6 lg:text-sm xl:text-base hover:text-secondarycolor-light"
               >
                 <span class="px-3 py-2 text-white text-lg  lg:text-xl xl:text-2xl  leading-5  tracking-wide bg-primarybg rounded-full">
                   Appelez-nous
                 </span>
                 <span class="  ml-3 text-lg  lg:text-xl xl:text-2xl font-semibold leading-5 text-white">
-                  078 605 33 63
+                  079 130 47 68
                 </span>
                 <svg
                   class="ml-2 w-6 h-6 text-white"
