@@ -45,8 +45,7 @@ exports.createPages = ({ graphql, actions }) => {
         // creates a page for each entry with the storyblok slug
         entries.forEach(entry => {
           // skip home story
-          console.log("pageslug", entry)
-          if (entry.slug !== "home" && entry.node.name !== "layout") {
+          if (entry.slug !== "home") {
             const page = {
               path: `/${entry.node.full_slug}`,
               component: storyblokEntry,
