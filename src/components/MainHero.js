@@ -24,6 +24,7 @@ export default function MainHero({ blok }) {
   const servicesDropdown = blok.navbar[0].Elements.find(
     ele => ele.component === "dropdown"
   )
+  console.log("mainhero", blok)
   return (
     <div className="relative lg:h-screen mb-36">
       <div className="max-w-7xl mx-auto">
@@ -111,7 +112,7 @@ export default function MainHero({ blok }) {
                                 className="z-20 relative grid gap-1  py-6 sm:py-8"
                               >
                                 {servicesDropdown.Elements.map(element => (
-                                  <div class="flex items-center block rounded-md hover:bg-green-100 px-5">
+                                  <div class="flex items-center rounded-md hover:bg-green-100 px-5">
                                     <img
                                       src={cleaningToolImage}
                                       className="text-green-500 h-6 w-auto mt-3"
@@ -330,7 +331,7 @@ export default function MainHero({ blok }) {
                 <div className="sm:flex sm:justify-center hero:justify-start text-center">
                   <div className="rounded-md shadow">
                     <Link
-                      to={blok.button[0].link.url}
+                      to={blok.button[0].link}
                       className="block w-full py-3 px-4 rounded-md shadow-lg bg-primarybg text-white font-bold focus:outline-none"
                     >
                       {blok.button[0].text}
