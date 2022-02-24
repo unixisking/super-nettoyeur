@@ -4,6 +4,7 @@ module.exports = {
     description: `Entreprise de nettoyage en Romandie, pas cher, Disponible 24/7.`,
     author: `@try2promote`,
     titleTemplate: "%s · Super Nettoyage",
+    siteUrl: "https://super-nettoyage.ch",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -41,5 +42,7 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     "gatsby-plugin-postcss",
+    `gatsby-plugin-advanced-sitemap`,
+    `gatsby-plugin-robots-txt`,
   ],
 }
