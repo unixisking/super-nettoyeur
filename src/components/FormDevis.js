@@ -1,11 +1,11 @@
-import React, { useState } from "react"
+import React from "react"
+
+import { navigate } from "gatsby"
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
 
-import { FaWhatsapp } from "react-icons/fa"
 import { SERVICES } from "../helpers"
-import { navigate } from "gatsby-link"
 
 const schema = yup
   .object({
