@@ -51,9 +51,11 @@ export default function FormDevis() {
         className="bg-gray-900 h-2 w-2 rounded-full mx-auto mt-12"
       /> */}
       <span className="border-b-1 border-primarytext w-12" />
-      <div className="py-10 px-6 sm:px-10 xl:py-12 xl:px-48">
+      <div className="py-10 px-6 sm:px-10 xl:py-12 xl:px-48 mx-auto">
         <form
-          onSubmit={handleSubmit(onSubmit)}
+          method="post"
+          action="/api/get_devis"
+          // onSubmit={handleSubmit(onSubmit)}
           className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
         >
           <div className="col-span-2 sm:col-span-1">
