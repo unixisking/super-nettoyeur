@@ -1,14 +1,13 @@
 import React from "react"
 import { CheckIcon } from "@heroicons/react/outline"
 import DynamicComponent from "./dynamicComponent"
-import slugify from "slugify"
 import clsx from "clsx"
 
 export default function Section({ blok }) {
   return (
     <div id={blok.slug} className="overflow-hidden my-12">
-      <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
-        <div className="relative grid-flow-row-dense  mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center max-w-5xl mx-4">
+      <div className="relative mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative grid-flow-row-dense mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center mx-auto">
           <div
             className={clsx([
               "relative",
@@ -36,7 +35,7 @@ export default function Section({ blok }) {
 
           <div
             className={clsx([
-              "mt-10 -mx-4 relative lg:mt-0",
+              "mt-10 mx-auto relative lg:mt-0",
               blok.image_position === "left" ? "col-start-1" : "col-start-2",
             ])}
             aria-hidden="true"

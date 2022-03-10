@@ -69,5 +69,13 @@ module.exports = {
         enableWebVitalsTracking: true,
       },
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "villes",
+        path: "./src/images/villes",
+      },
+      __key: "images",
+    },
   ],
 }

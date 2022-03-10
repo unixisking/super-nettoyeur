@@ -24,6 +24,8 @@ import Contact from "./Contact"
 import MainHero from "./MainHero"
 import Seo from "./seo"
 import ThankYou from "./thankyou"
+import WhyUs from "./WhyUs"
+import Prestations, { Prestation } from "./Prestations"
 
 const Components = {
   teaser: Teaser,
@@ -50,6 +52,10 @@ const Components = {
   main_hero: MainHero,
   SEO: Seo,
   thankyou: ThankYou,
+  whyUs: WhyUs,
+  prestations: Prestations,
+  prestation: Prestation,
+  Zones: ZonesSection,
 }
 
 const DynamicComponent = ({ blok }) => {
