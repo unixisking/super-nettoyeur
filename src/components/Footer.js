@@ -11,6 +11,10 @@ const navigation = {
   ],
   services: [
     {
+      name: "Entreprise de nettoyage",
+      href: "/entreprise-de-nettoyage",
+    },
+    {
       name: "Nettoyage appartement",
       href: "/services#nettoyage-et-conciergerie-dimmeubles",
     },

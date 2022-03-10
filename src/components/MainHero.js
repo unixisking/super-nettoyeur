@@ -10,11 +10,11 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline"
 import cleaningToolImage from "../images/cleaning-tool.png"
 
 const features = [
-  "Disponibilité 7J/7 et 24H/24, 365 jours par an.",
-  "Ponctualité et rapidité des interventions dans tout le canton de Vaud.",
-  "Tarifs raisonnables pour des services de qualité.",
-  "Devis instantané via WhatsApp pour les particuliers via ou sur rendez-vous pour les entreprises.",
-  "Nettoyage et entretien pour tout type de locaux (bureau, appartement, commerces, immeuble, etc).",
+  "Des prix très justes et une qualité de service exceptionnelle.",
+  "Devis gratuit et sur place par WhatsApp pour les particuliers ou sur rendez-vous pour les professionnels.",
+  "Service d'entretien et conciergerie sur-mesure pour tout type d'espace : entretien des locaux, ménage pour entreprise et bien d'autres encore.",
+  "Une disponibilité 24h/24 et 7j/7, et ce durant toute l'année.",
+  "Efficacité et rapidité des interventions dans l'ensemble de la Suisse romande.",
 ]
 
 export default function MainHero({ blok }) {
