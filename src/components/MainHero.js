@@ -8,6 +8,7 @@ import { Fragment } from "react"
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
 
 import cleaningToolImage from "../images/cleaning-tool.png"
+import { useMediaQuery } from "react-responsive"
 
 const features = [
   "Des prix très justes et une qualité de service exceptionnelle.",
@@ -25,9 +26,12 @@ export default function MainHero({ blok }) {
     ele => ele.component === "dropdown"
   )
   console.log("mainhero", blok)
+  const isDesktop = useMediaQuery({ query: "(min-width: 1224px)" })
   return (
     <div
-      style={{ marginBottom: blok.bottom ? `${blok.bottom}px` : null }}
+      style={{
+        marginBottom: blok.bottom && isDesktop ? `${blok.bottom}px` : null,
+      }}
       className="relative lg:h-screen mb-36"
     >
       <div className="max-w-7xl mx-auto">
