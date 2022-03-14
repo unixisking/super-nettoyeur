@@ -5,7 +5,12 @@ import clsx from "clsx"
 
 export default function Section({ blok }) {
   return (
-    <div id={blok.slug} className="overflow-hidden my-12">
+    <div
+      id={blok.slug}
+      className={`overflow-hidden mb-12 ${
+        blok.top ? "mt-" + blok.top : "mt-12"
+      }`}
+    >
       <div className="relative mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative grid-flow-row-dense mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center mx-auto">
           <div

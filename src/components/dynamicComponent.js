@@ -26,7 +26,6 @@ import Seo from "./seo"
 import ThankYou from "./thankyou"
 import WhyUs from "./WhyUs"
 import Prestations, { Prestation } from "./Prestations"
-import Spacing from "./spacing"
 
 const Components = {
   teaser: Teaser,
@@ -57,7 +56,6 @@ const Components = {
   prestations: Prestations,
   prestation: Prestation,
   Zones: ZonesSection,
-  spacing: Spacing,
 }
 
 const DynamicComponent = ({ blok }) => {
