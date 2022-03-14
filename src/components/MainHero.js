@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import clsx from "clsx"
 import { Link } from "gatsby"
 
@@ -8,7 +8,6 @@ import { Fragment } from "react"
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
 
 import cleaningToolImage from "../images/cleaning-tool.png"
-import { useMediaQuery } from "react-responsive"
 
 const features = [
   "Des prix très justes et une qualité de service exceptionnelle.",
@@ -21,12 +20,20 @@ const features = [
 export default function MainHero({ blok }) {
   const [dropdownIsShown, setDropdownIsShown] = useState(false)
   const [subMenuIsShown, setSubMenuIsShown] = useState(false)
+  const [isDesktop, setIsDesktop] = useState(false)
 
   const servicesDropdown = blok.navbar[0].Elements.find(
     ele => ele.component === "dropdown"
   )
-  console.log("mainhero", blok)
-  const isDesktop = useMediaQuery({ query: "(min-width: 1224px)" })
+
+  const handleResize = () => {
+    setIsDesktop(window.innerWidth > 1024)
+  }
+  useEffect(() => {
+    handleResize()
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
   return (
     <div
       style={{
