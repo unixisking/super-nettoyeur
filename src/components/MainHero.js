@@ -26,7 +26,10 @@ export default function MainHero({ blok }) {
   )
   console.log("mainhero", blok)
   return (
-    <div className="relative lg:h-screen mb-36">
+    <div
+      style={{ marginBottom: `${blok.top}px` }}
+      className="relative lg:h-screen mb-36"
+    >
       <div className="max-w-7xl mx-auto">
         <div
           style={{ background: "rgb(240, 248, 237)" }}
